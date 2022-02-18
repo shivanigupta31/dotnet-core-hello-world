@@ -31,4 +31,13 @@ steps:
   inputs:
     artifactoryService: 'JFrog Artifactory - Shivani'
     specSource: 'taskConfiguration'
+    fileSpec: |
+      {
+        "files": [
+          {
+            "pattern": ".dll",
+            "target": "uploadartifacts-generic-local/"
+          }
+        ]
+      }
     failNoOp: true
