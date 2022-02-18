@@ -27,3 +27,8 @@ steps:
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   condition: succeeded()
+- task: ArtifactoryGenericUpload@2
+  inputs:
+    artifactoryService: 'JFrog Artifactory - Shivani'
+    specSource: 'taskConfiguration'
+    failNoOp: true
